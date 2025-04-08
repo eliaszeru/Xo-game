@@ -1,6 +1,6 @@
 const readline = require('readline');
 
-// Create an interface to read from the console
+// Started by Sediqa
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
