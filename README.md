@@ -1,1 +1,23 @@
-This is the XO interactive game, that we made at Powercoders with my team mate Sediqa, as a group project blah blah, to play this game you have to use your integrated terminal. The game has 2 features. You can play it with the computer (single player) and also with your peer (multiplayer mode). When you want to spot X or O you need to play with the numbers starting from 0 until 8, like the concept of array index we have learnt in the class.
+## XO Interactive Game
+
+This is an XO (Tic Tac Toe) game we made at Powercoders as a group project, developed by me and my teammate Sediqa.
+
+### How to Play
+
+You need to use your **integrated terminal** to play this game.
+
+It has two modes:
+- **Single player** – play against the computer
+- **Multiplayer** – play with a friend
+
+To place your X or O, use numbers from **0 to 8**, like array indexes we learned in class.  
+The board looks like this:
+
+```
+0 | 1 | 2
+---------
+3 | 4 | 5
+---------
+6 | 7 | 8
+```
+
