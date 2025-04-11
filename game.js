@@ -6,16 +6,16 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-let board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+let board = ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '];
 let currentPlayer = '❌';
 let gameMode = '';
 
 function printBoard() {
   console.log(`
   ${board[0]} | ${board[1]} | ${board[2]}
-  -----------
+  -------------
   ${board[3]} | ${board[4]} | ${board[5]}
-  -----------
+  -------------
   ${board[6]} | ${board[7]} | ${board[8]}
   `);
 }
@@ -34,13 +34,13 @@ function checkWin(player) {
 }
 
 function getEmptyPositions() {
-  return board.map((val, idx) => val === ' ' ? idx : null).filter(v => v !== null);
+  return board.map((val, idx) => val === '  ' ? idx : null).filter(v => v !== null);
 }
 
 function playerMove() {
   rl.question(`Player ${currentPlayer}, enter position (0-8): `, (move) => {
     move = parseInt(move, 10);
-    if (board[move] !== ' ' || isNaN(move) || move < 0 || move > 8) {
+    if (board[move] !== '  ' || isNaN(move) || move < 0 || move > 8) {
       console.log("⚠️ Invalid move. Try again.");
       return playerMove();  
     }
@@ -78,7 +78,7 @@ function checkGameStatus() {
 }
 
 function playGame() {
-  rl.question(" Welcome! to play this game you have to apply the index concept in array that we have learnt last week. now to start the game Choose mode: '1' for Single Player, '2' for Multiplayer: ", (mode) => {
+  rl.question(" Welcome !  to play this game you have to apply the index concept in array that we have learnt last week. Now to start the game Choose mode: '1' for Single Player, '2' for Multiplayer: ", (mode) => {
     if (mode !== '1' && mode !== '2') {
       console.log("⚠️ Invalid choice. Please restart and try again.");
       rl.close();
