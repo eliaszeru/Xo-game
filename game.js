@@ -85,6 +85,8 @@ function playGame() {
       return;
     }
 
+    
+
     gameMode = mode;
     printBoard();
     playerMove();  // Start the game with Player X's move
