@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 });
 
 let board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
-let currentPlayer = 'X';
+let currentPlayer = '❌';
 let gameMode = '';
 
 function printBoard() {
@@ -41,7 +41,7 @@ function playerMove() {
   rl.question(`Player ${currentPlayer}, enter position (0-8): `, (move) => {
     move = parseInt(move, 10);
     if (board[move] !== ' ' || isNaN(move) || move < 0 || move > 8) {
-      console.log("❌ Invalid move. Try again.");
+      console.log("⚠️ Invalid move. Try again.");
       return playerMove();  // Recursively ask again
     }
     board[move] = currentPlayer;
@@ -53,7 +53,7 @@ function computerMove() {
   const empty = getEmptyPositions();
   const move = empty[Math.floor(Math.random() * empty.length)];
   console.log(`💻 Computer chose position ${move}`);
-  board[move] = 'O';
+  board[move] = '⭕️';
   checkGameStatus();
 }
 
@@ -67,8 +67,8 @@ function checkGameStatus() {
     console.log("🤝 It's a draw!");
     rl.close();  // Close the game
   } else {
-    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-    if (gameMode === '1' && currentPlayer === 'O') {
+    currentPlayer = currentPlayer === '❌' ? '⭕️' : '❌';
+    if (gameMode === '1' && currentPlayer === '⭕️') {
       computerMove();  // Computer's turn in single-player mode
     } else {
       printBoard();    // Print the board after each move
