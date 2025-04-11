@@ -8,6 +8,7 @@ const rl = readline.createInterface({
 
 let board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
 let currentPlayer = '❌';
+let currentPlayer = '❌';
 let gameMode = '';
 
 function printBoard() {
@@ -54,6 +55,7 @@ function computerMove() {
   const move = empty[Math.floor(Math.random() * empty.length)];
   console.log(`💻 Computer chose position ${move}`);
   board[move] = '⭕️';
+  board[move] = '⭕️';
   checkGameStatus();
 }
 
@@ -84,6 +86,8 @@ function playGame() {
       rl.close();
       return;
     }
+
+    
 
     gameMode = mode;
     printBoard();
