@@ -78,7 +78,7 @@ function checkGameStatus() {
 }
 
 function playGame() {
-  rl.question(" In order to play this game you have to apply the index concept in array that we have learnt last week. now to start the   game Choose mode: '1' for Single Player, '2' for Multiplayer: ", (mode) => {
+  rl.question(" Welcome! to play this game you have to apply the index concept in array that we have learnt last week. now to start the game Choose mode: '1' for Single Player, '2' for Multiplayer: ", (mode) => {
     if (mode !== '1' && mode !== '2') {
       console.log("⚠️ Invalid choice. Please restart and try again.");
       rl.close();
