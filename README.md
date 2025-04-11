@@ -1,7 +1,3 @@
-Got it! Here's a more casual and simple version that still reads cleanly for a GitHub README:
-
----
-
 ## XO Interactive Game
 
 This is an XO (Tic Tac Toe) game we made at Powercoders as a group project, developed by me and my teammate Sediqa.
@@ -25,6 +21,3 @@ The board looks like this:
 6 | 7 | 8
 ```
 
----
-
-Let me know if you want to add more details like setup steps or examples!
